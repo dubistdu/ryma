@@ -3,7 +3,6 @@
   <head>
     <title>Ryma</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,7 +16,9 @@
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
     <div>
-      sign up
+      <%= link_to 'Sign in', user_session_path %>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+    </div>
     <%= yield %>
   </body>
 </html>
